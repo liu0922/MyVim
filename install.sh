@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/bash
 rm -rf ~/.vim
 rm .vimrc
 sudo apt-get install  exuberant-ctags  cscope
