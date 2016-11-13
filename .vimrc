@@ -75,6 +75,8 @@ set nobackup
 set tags=tags;
 set autochdir
 set mouse=a
+set listchars=eol:↵,tab:»·,trail:∎,extends:»,precedes:«
+set list
 
 "*** vim-Bbye ***"
 map bd : Bd <CR>
@@ -91,7 +93,8 @@ map <F8> : bn<CR>
 "*** vim ***"
 map <F9> : wqa <CR>
 map <F10> : qa <CR>
-map <C-l> : set hlsearch! <CR>
+map <C-h> : set hlsearch! <CR>
+map <C-l> : set list! <CR>
 map <C-n> : set number!<CR>
 "*** ctags ***"
 map <C-F12> :!ctags -R -h ".cc.c.cpp.h" . <CR>
