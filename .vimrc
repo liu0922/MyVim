@@ -1,4 +1,4 @@
-"============================================================================
+"===========================================================================
 " Automatically set paste mode in Vim when pasting in insert mode
 " Suppot Tmux
 " Reference:
@@ -8,7 +8,8 @@ function! WrapForTmux(s)
   if !exists('$TMUX')
     return a:s
   endif
-  let tmux_start = "\<Esc>Ptmux;"                                                                                         let tmux_end = "\<Esc>\\"
+  let tmux_start = "\<Esc>Ptmux;"
+  let tmux_end = "\<Esc>\\"
   return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
 endfunction
 let &t_SI .= WrapForTmux("\<Esc>[?2004h")
@@ -20,8 +21,7 @@ function! XTermPasteBegin()
 endfunction
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
-" ============================================================================
-
+" ==========================================================================
 " Vundle initialization
 " Avoid modify this section, unless you are very sure of what you are doing
 
@@ -45,14 +45,14 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" ============================================================================
+" ==========================================================================
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/winmanager'
 Bundle 'moll/vim-bbye'
 Bundle 'putty'
-" ============================================================================
+" ==========================================================================
 " Install plugins the first time vim runs
 
 if iCanHazVundle == 0
@@ -61,7 +61,7 @@ if iCanHazVundle == 0
     :BundleInstall
 endif
 
-" ============================================================================
+" ==========================================================================
 
 colorscheme putty
 
@@ -97,10 +97,8 @@ map <C-n> : set number!<CR>
 map <C-F12> :!ctags -R -h ".cc.c.cpp.h" . <CR>
 
 "*** cscope ***"
-"*** Pathogen configuration ***"
-
-execute pathogen#infect()
-call pathogen#helptags() " generate helptags for everything in 'runtimepath'
+"==========================================================================
+"Plugin setting
 
 "*** vim-airline configuration ***"
 
