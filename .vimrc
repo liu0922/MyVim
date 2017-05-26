@@ -52,6 +52,18 @@ Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/winmanager'
 Bundle 'moll/vim-bbye'
 Bundle 'putty'
+
+Bundle 'airblade/vim-gitgutter'
+
+Bundle 'tpope/vim-fugitive'
+" Gblame -> git blame↵
+" ctrl w w -> change screen
+Bundle 'junegunn/gv.vim'
+" GV -> git log --graph
+" o-> open
+" zc-> fold diff
+" zn-> unfold diff
+
 " ==========================================================================
 " Install plugins the first time vim runs
 
