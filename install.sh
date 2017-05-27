@@ -15,5 +15,8 @@ cp .vimrc ~/.vimrc
 
 #sudo apt-get install  exuberant-ctags  cscope
 
+# Install vim
+sudo apt-get install vim
+
 # Install vim plugins
 vim
